@@ -1,0 +1,41 @@
+package model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import model.PassengerFactory;
+import model.RandomPassengerGenerator;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class PassengerFactoryTest {
+
+  /**
+   * Setup deterministic operations before each test run.
+   */
+  @BeforeEach
+  public void setUp() {
+    PassengerFactory.DETERMINISTIC = true;
+    PassengerFactory.DETERMINISTIC_NAMES_COUNT = 0;
+    PassengerFactory.DETERMINISTIC_DESTINATION_COUNT = 0;
+    RandomPassengerGenerator.DETERMINISTIC = true;
+  }
+
+  /**
+   * Tests generate function.
+   */
+  @Test
+  public void testGenerate() {
+    assertEquals(3, PassengerFactory.generate(1, 10).getDestination());
+
+  }
+
+  /**
+   * Tests generate function.
+   */
+  @Test
+  public void nameGeneration() {
+    assertEquals("Goldy", PassengerFactory.nameGeneration());
+
+  }
+
+}

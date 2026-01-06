@@ -1,0 +1,47 @@
+### Java
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+hs_err_pid*
+
+# Package archives (optional but common)
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Maven / Java IDE metadata
+.mvn/
+*.classpath
+*.project
+*.settings/
+target/
+bin/
+
+### Gradle
+.gradle/
+**/build/
+gradle-app.setting
+.gradletasknamecache
+!gradle/wrapper/gradle-wrapper.jar
+
+### JetBrains IDEs
+.idea/
+*.iml
+
+### NetBeans
+nbactions*.xml
+nb-configuration*.xml
+
+### OS / misc
+Desktop.ini
+$RECYCLE.BIN/
+**/.DS_Store
+Thumbs.db
+
+### Project-specific
+/unused
